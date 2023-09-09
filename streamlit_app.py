@@ -55,8 +55,6 @@ Ever watched a YouTube video and wondered how well you understood its content? H
 **How does it work?** 🤔
 1. Paste the YouTube video URL of your recently watched video.
 2. Enter your [OpenAI API Key](https://platform.openai.com/account/api-keys).
-3. Decide on the number of questions you'd love to challenge yourself with.
-
 
 ⚠️ Important: The video **must** have English captions for the tool to work.
 
@@ -66,7 +64,6 @@ Once you've input the details, voilà! Dive deep into questions crafted just for
 with st.form("user_input"):
     YOUTUBE_URL = st.text_input("Enter the YouTube video link:", value="https://youtu.be/bcYwiwsDfGE?si=qQ0nvkmKkzHJom2y")
     OPENAI_API_KEY = st.text_input("Enter your OpenAI API Key:", placeholder="sk-XXXX", type='password')
-    NUMBER_OF_QUESTIONS = st.number_input("Choose the number of questions:", min_value=2, max_value=10, value=5)
     submitted = st.form_submit_button("Craft my quiz!")
 
 if submitted or ('quiz_data_list' in st.session_state):
@@ -81,7 +78,7 @@ if submitted or ('quiz_data_list' in st.session_state):
         if submitted:
             video_id = extract_video_id_from_url(YOUTUBE_URL)
             video_transcription = get_transcript_text(video_id)
-            quiz_data_str = get_quiz_data(video_transcription, NUMBER_OF_QUESTIONS, OPENAI_API_KEY)
+            quiz_data_str = get_quiz_data(video_transcription, OPENAI_API_KEY)
             st.session_state.quiz_data_list = string_to_list(quiz_data_str)
 
             if 'user_answers' not in st.session_state:
@@ -97,13 +94,14 @@ if submitted or ('quiz_data_list' in st.session_state):
                 st.session_state.correct_answers.append(correct_answer)
 
         with st.form(key='quiz_form'):
-            st.subheader("🧠 Quiz Time: Test Your Knowledge!")
+            st.subheader("🧠 Quiz Time: Test Your Knowledge!", anchor=False)
             for i, q in enumerate(st.session_state.quiz_data_list):
                 options = st.session_state.randomized_options[i]
                 default_index = st.session_state.user_answers[i] if st.session_state.user_answers[i] is not None else 0
                 response = st.radio(q[0], options, index=default_index)
                 user_choice_index = options.index(response)
                 st.session_state.user_answers[i] = user_choice_index  # Update the stored answer right after fetching it
+
 
             results_submitted = st.form_submit_button(label='Unveil My Score!')
 
