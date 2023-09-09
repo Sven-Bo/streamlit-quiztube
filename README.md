@@ -1,4 +1,4 @@
-# QuizTube: Transforming YouTube Videos into Quizzes with Streamlit
+# 🧠 QuizTube: Transforming YouTube Videos into Quizzes with Streamlit
 
 QuizTube offers an innovative approach to create interactive quizzes from YouTube video captions. By extracting captions using the [`youtube-transcript-api`](https://github.com/jdepoix/youtube-transcript-api) and subsequently processing the text with OpenAI's LLM, `QuizTube` serves as a powerful tool for enhancing video content interaction.
 
