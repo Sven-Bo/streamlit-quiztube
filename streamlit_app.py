@@ -31,7 +31,7 @@ with st.sidebar:
     st.subheader("🔗 Connect with Me", anchor=False)
     st.markdown(
         """
-        - [🐙 Source Code](https://github.com/Sven-Bo)
+        - [🐙 Source Code](https://github.com/Sven-Bo/streamlit-quiztube)
         - [🎥 YouTube Channel](https://youtube.com/@codingisfun)
         - [☕ Buy me a Coffee](https://pythonandvba.com/coffee-donation)
         - [🌐 Personal Website](https://pythonandvba.com)
@@ -102,7 +102,8 @@ if submitted or ('quiz_data_list' in st.session_state):
                 options = st.session_state.randomized_options[i]
                 default_index = st.session_state.user_answers[i] if st.session_state.user_answers[i] is not None else 0
                 response = st.radio(q[0], options, index=default_index)
-                st.session_state.user_answers[i] = options.index(response)
+                user_choice_index = options.index(response)
+                st.session_state.user_answers[i] = user_choice_index  # Update the stored answer right after fetching it
 
             results_submitted = st.form_submit_button(label='Unveil My Score!')
 
