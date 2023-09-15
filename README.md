@@ -2,6 +2,9 @@
 
 QuizTube offers an innovative approach to create interactive quizzes from YouTube video captions. By extracting captions using the [`youtube-transcript-api`](https://github.com/jdepoix/youtube-transcript-api) and subsequently processing the text with OpenAI's LLM, `QuizTube` serves as a powerful tool for enhancing video content interaction.
 
+## Website Link
+👉 Check out the app here: https://quiztube.streamlit.app/
+
 ## How It Works
 
 1. **Caption Extraction:** Using the [`youtube-transcript-api`](https://github.com/jdepoix/youtube-transcript-api), captions are extracted from a given YouTube video URL.
