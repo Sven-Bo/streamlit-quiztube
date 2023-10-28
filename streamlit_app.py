@@ -48,9 +48,9 @@ with st.sidebar:
 
 
 
-st.title(":red[QuizTube] — Watch. Learn. Quiz. 🧠", anchor=False)
+st.title(":red[OAL QuizTube] — Watch. Learn. Quiz. 🧠", anchor=False)
 st.write("""
-Ever watched a YouTube video and wondered how well you understood its content? Here's a fun twist: Instead of just watching on YouTube, come to **QuizTube** and test your comprehension!
+Ever watched an e-lecture YouTube video and wondered how well you understood its content? Here's a fun twist: Instead of just watching on YouTube, come to **QuizTube** and test your comprehension!
 
 **How does it work?** 🤔
 1. Paste the YouTube video URL of your recently watched video.
