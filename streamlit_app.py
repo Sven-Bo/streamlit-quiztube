@@ -20,37 +20,18 @@ if 'first_time' not in st.session_state:
     st.session_state.first_time = False
 
 with st.sidebar:
-    st.header("👨‍💻 About the Author")
+    st.header("👨‍💻 About the development")
     st.write("""
-    **Sven Bosau** is a tech enthusiast, educator, and coder. Driven by passion and a love for sharing knowledge, he's created this platform to make learning more interactive and fun.
-
-    Connect, contribute, or just say hi!
+    **Prototype development
     """)
 
-    st.divider()
-    st.subheader("🔗 Connect with Me", anchor=False)
-    st.markdown(
-        """
-        - [🐙 Source Code](https://github.com/Sven-Bo/streamlit-quiztube)
-        - [🎥 YouTube Channel](https://youtube.com/@codingisfun)
-        - [☕ Buy me a Coffee](https://pythonandvba.com/coffee-donation)
-        - [🌐 Personal Website](https://pythonandvba.com)
-        - [👔 LinkedIn](https://www.linkedin.com/in/sven-bosau/)
-        """
-    )
-
-    st.divider()
-    st.subheader("🏆 Streamlit Hackathon 2023", anchor=False)
-    st.write("QuizTube proudly stands as Sven's innovative entry for the Streamlit Hackathon held in September 2023. A testament to the power of imagination and code!")
-
-    st.divider()
-    st.write("Made with ♥ in Dresden, Germany")
+   
 
 
 
 st.title(":red[OAL QuizTube] — Watch. Learn. Quiz. 🧠", anchor=False)
 st.write("""
-Ever watched an e-lecture YouTube video and wondered how well you understood its content? Here's a fun twist: Instead of just watching on YouTube, come to **QuizTube** and test your comprehension!
+Ever watched an e-lecture YouTube video and wondered how well you understood its content? Here's a fun twist: Instead of just watching on YouTube, come to **OAL QuizTube** and test your understanding!
 
 **How does it work?** 🤔
 1. Paste the YouTube video URL of your recently watched video.
