@@ -22,16 +22,16 @@ if 'first_time' not in st.session_state:
 with st.sidebar:
     st.header("👨‍💻 About the development")
     st.write("""
-    **Prototype development
+    **Prototype development for interactive OAL e-lecture videos
     """)
 
    
 
 
 
-st.title(":red[OAL QuizTube] — Watch. Learn. Quiz. 🧠", anchor=False)
+st.title(":red[NP QuizTube] — Watch. Learn. Quiz. 🧠", anchor=False)
 st.write("""
-Ever watched an e-lecture YouTube video and wondered how well you understood its content? Here's a fun twist: Instead of just watching on YouTube, come to **OAL QuizTube** and test your understanding!
+Watched an e-lecture on YouTube? Test your understanding at OAL QuizTube! 📚🧐📝         
 
 **How does it work?** 🤔
 1. Paste the YouTube video URL of your recently watched video.
